@@ -7,68 +7,45 @@
     <title>Flex</title>
     <style>
         .flex-container{
-            margin: 0;
-            padding: 0;
             display: flex;
-            list-style: none;
+            height: 150px;
+            border: 2px solid black;
+            max-width: 310px;
         }
         .flex-item{
-            background: blue;
-            height: 50px;
-            width: 50px;
-            line-height: 50px;
-            font-size: 20px;
-            color: white;
+            height: 50%;
+            font-size: 24px;
             text-align: center;
-            margin: 5px;
+            min-width: 100px;
+            line-height: 50px;
         }
 
-        .row{
-            flex-direction: row;
+        .wrap{
+            flex-wrap: wrap;
         }
 
-        .row-reverse{
-            flex-direction: row-reverse;
+        .blue{
+            background-color: blue;
         }
 
-        .row-reverse li{
-            background-color: red;
+        .green{
+            background-color: lightgreen;
         }
 
-        .column{
-            float: left;
-            flex-direction: column;
-        }
-
-        .column li{
+        .orange{
             background-color: orange;
         }
 
     </style>
 </head>
 <body>
-    <ul class="flex-container row">
-        <li class="flex-item">1</li>
-        <li class="flex-item">2</li>
-        <li class="flex-item">3</li>
-        <li class="flex-item">4</li>
-        <li class="flex-item">5</li>
-    </ul>
+    <h1>wrap</h1>
 
-    <ul class="flex-container row-reverse">
-        <li class="flex-item">1</li>
-        <li class="flex-item">2</li>
-        <li class="flex-item">3</li>
-        <li class="flex-item">4</li>
-        <li class="flex-item">5</li>
-    </ul>
-
-    <ul class="flex-container column">
-        <li class="flex-item">1</li>
-        <li class="flex-item">2</li>
-        <li class="flex-item">3</li>
-        <li class="flex-item">4</li>
-        <li class="flex-item">5</li>
-    </ul>
+    <div class="flex-container wrap">
+        <div class="flex-item orange">1</div>
+        <div class="flex-item green">2</div>
+        <div class="flex-item blue">3</div>
+        <div class="flex-item green">4</div>
+    </div>
 </body>
 </html>
